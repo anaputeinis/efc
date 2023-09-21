@@ -1,6 +1,6 @@
 ### ***Путейнис Анна - efc***
 
-### Группа: 10 - МИ - 1
+### Группа: 11 - МИ - 1
 ### Электронная почта:  anaputeinis@yandex.ru
 ### VK: www.vk.com/anaputeinis
 
