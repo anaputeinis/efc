@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+п»їusing Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
@@ -15,15 +15,15 @@ namespace web_thingy.Pages
         SqlConnection con;
 
         // Onpost:
-        // получает RequestClass, где type_request - тип операции, которую нужно совершить, content_request - данные, необходимые для совершения указанной операции
-        // возвращает ResponseClass, где type_response - успешность выполнения (0- не успешно, 1- успешно и 2- вариативный случай), content_response- возвращаемые данные или сообщение об ошибке
+        // РїРѕР»СѓС‡Р°РµС‚ RequestClass, РіРґРµ type_request - С‚РёРї РѕРїРµСЂР°С†РёРё, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ СЃРѕРІРµСЂС€РёС‚СЊ, content_request - РґР°РЅРЅС‹Рµ, РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ СЃРѕРІРµСЂС€РµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕР№ РѕРїРµСЂР°С†РёРё
+        // РІРѕР·РІСЂР°С‰Р°РµС‚ ResponseClass, РіРґРµ type_response - СѓСЃРїРµС€РЅРѕСЃС‚СЊ РІС‹РїРѕР»РЅРµРЅРёСЏ (0- РЅРµ СѓСЃРїРµС€РЅРѕ, 1- СѓСЃРїРµС€РЅРѕ Рё 2- РІР°СЂРёР°С‚РёРІРЅС‹Р№ СЃР»СѓС‡Р°Р№), content_response- РІРѕР·РІСЂР°С‰Р°РµРјС‹Рµ РґР°РЅРЅС‹Рµ РёР»Рё СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ
         public async Task<IActionResult> OnPost()
         {
             string raw_body = await Helpers.ExtractBodyAsync(Request.Body);
             var upld = JsonConvert.DeserializeObject<RequestClass>(raw_body);
 
             type_response = 0;
-            text = "Что-то пошло не так.";
+            text = "Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє.";
             try
             {
                 if (upld != null)
@@ -90,7 +90,7 @@ namespace web_thingy.Pages
                         var profile = JsonConvert.DeserializeObject<AllergyProfile>(upld.content_request);
                         if (profile != null)
                         {
-                            if (Upload_ProfileContent(profile.AllergyList, profile.User_Id.ToString(), profile.Name)) { type_response = 1; text = "Успешно."; };
+                            if (Upload_ProfileContent(profile.AllergyList, profile.User_Id.ToString(), profile.Name)) { type_response = 1; text = "РЈСЃРїРµС€РЅРѕ."; };
                         }
 
                     }
@@ -150,7 +150,7 @@ namespace web_thingy.Pages
             catch 
             {
                 type_response = 0;
-                text = "Ошибка работы сервера.";
+                text = "РћС€РёР±РєР° СЂР°Р±РѕС‚С‹ СЃРµСЂРІРµСЂР°.";
             }
             ResponseClass response = new ResponseClass(type_response, text);
 
@@ -159,7 +159,7 @@ namespace web_thingy.Pages
 
         //USER
 
-        // создание нового аккаунта, параметры - уникальный айди firebase, email и пароль
+        // СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р°РєРєР°СѓРЅС‚Р°, РїР°СЂР°РјРµС‚СЂС‹ - СѓРЅРёРєР°Р»СЊРЅС‹Р№ Р°Р№РґРё firebase, email Рё РїР°СЂРѕР»СЊ
         public void Upload_User(string firebase_uid, string email, string password) 
         {
             try
@@ -188,7 +188,7 @@ namespace web_thingy.Pages
             catch { return; }
         }
 
-        //обновить пароль, параметра - айди аккаунта и новый пароль
+        //РѕР±РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ, РїР°СЂР°РјРµС‚СЂР° - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р° Рё РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ
         public void Update_Password(string user_id, string password )
         {
             try 
@@ -198,13 +198,13 @@ namespace web_thingy.Pages
                 if (cmd.ExecuteNonQuery() != -1)
                 {
                     type_response = 1;
-                    text = "Успешно.";
+                    text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
         }
 
-        //удалить продукт из списка любимых/списка-истории, параметры - айди пользователя, айди товара, название таблицы
+        //СѓРґР°Р»РёС‚СЊ РїСЂРѕРґСѓРєС‚ РёР· СЃРїРёСЃРєР° Р»СЋР±РёРјС‹С…/СЃРїРёСЃРєР°-РёСЃС‚РѕСЂРёРё, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, Р°Р№РґРё С‚РѕРІР°СЂР°, РЅР°Р·РІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹
         public void Delete_From_User_List(string user_id, string item_id, string tablename)
         {
             try 
@@ -216,7 +216,7 @@ namespace web_thingy.Pages
                 if (cmd.ExecuteNonQuery() != -1)
                 {
                     type_response = 1;
-                    text = "Успешно.";
+                    text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
@@ -224,7 +224,7 @@ namespace web_thingy.Pages
 
         //ITEM
 
-        //создание нового продукта, параметр - создаваемый продукт
+        //СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїСЂРѕРґСѓРєС‚Р°, РїР°СЂР°РјРµС‚СЂ - СЃРѕР·РґР°РІР°РµРјС‹Р№ РїСЂРѕРґСѓРєС‚
         public void Upload_Item(Item item)
         {
             try
@@ -255,14 +255,14 @@ namespace web_thingy.Pages
                 }
                 else
                 {
-                    text = "Товар с таким кодом уже существует";
+                    text = "РўРѕРІР°СЂ СЃ С‚Р°РєРёРј РєРѕРґРѕРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
                     type_response = 2;
                 }
             }
             catch { return; }
         }
 
-        //добавление нового товара в любимые, параметры - айди пользователя и айди товара
+        //РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ С‚РѕРІР°СЂР° РІ Р»СЋР±РёРјС‹Рµ, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё Р°Р№РґРё С‚РѕРІР°СЂР°
         public void Upload_Favourite(string user_id, string item_id )
         {
             try 
@@ -287,13 +287,13 @@ namespace web_thingy.Pages
                 if (cmd.ExecuteNonQuery() != -1)
                 {
                     type_response = 1;
-                    text = "Успешно.";
+                    text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
         }
 
-        //добавление нового товара в историю, параметры - айди пользователя и айди товара
+        //РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ С‚РѕРІР°СЂР° РІ РёСЃС‚РѕСЂРёСЋ, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё Р°Р№РґРё С‚РѕРІР°СЂР°
         public void Upload_History(string user_id, string item_id)
         {
             try 
@@ -318,7 +318,7 @@ namespace web_thingy.Pages
                 if (cmd.ExecuteNonQuery() != -1)
                 {
                     type_response = 1;
-                    text = "Успешно.";
+                    text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
@@ -326,7 +326,7 @@ namespace web_thingy.Pages
 
         // PROFILE
 
-        // создание нового пользователя, параметр - создаваемый пользователь
+        // СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РїР°СЂР°РјРµС‚СЂ - СЃРѕР·РґР°РІР°РµРјС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
         public void Upload_Profile(AllergyProfile profile)
         {
             try 
@@ -338,19 +338,19 @@ namespace web_thingy.Pages
                 if (dr.HasRows)
                 {
                     dr.Close();
-                    text = "Профиль с таким именем уже существует";
+                    text = "РџСЂРѕС„РёР»СЊ СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
                     type_response = 2;
                 }
                 else
                 {
                     dr.Close();
-                    if (Upload_ProfileContent(profile.AllergyList, profile.User_Id.ToString(), profile.Name)) { type_response = 1; text = "Успешно."; };
+                    if (Upload_ProfileContent(profile.AllergyList, profile.User_Id.ToString(), profile.Name)) { type_response = 1; text = "РЈСЃРїРµС€РЅРѕ."; };
                 }
             }
             catch { return; }
         }
 
-        // удаление пользователя, параметр-удаляемый пользователь
+        // СѓРґР°Р»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РїР°СЂР°РјРµС‚СЂ-СѓРґР°Р»СЏРµРјС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
         public void Delete_Profile(AllergyProfile profile)
         {
             try 
@@ -362,13 +362,13 @@ namespace web_thingy.Pages
                 if (cmd.ExecuteNonQuery() != -1)
                 {
                      type_response = 1;
-                     text = "Успешно.";
+                     text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
         }
 
-        // удаление аллергии из списка аллегрий пользователя, параметр - пользователь, в списке аллергий которого происходят изменения
+        // СѓРґР°Р»РµРЅРёРµ Р°Р»Р»РµСЂРіРёРё РёР· СЃРїРёСЃРєР° Р°Р»Р»РµРіСЂРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РїР°СЂР°РјРµС‚СЂ - РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ, РІ СЃРїРёСЃРєРµ Р°Р»Р»РµСЂРіРёР№ РєРѕС‚РѕСЂРѕРіРѕ РїСЂРѕРёСЃС…РѕРґСЏС‚ РёР·РјРµРЅРµРЅРёСЏ
         public void Delete_Profile_Part(AllergyProfile profile)
         {
             try 
@@ -380,13 +380,13 @@ namespace web_thingy.Pages
                     var cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     type_response = 1;
-                    text = "Успешно.";
+                    text = "РЈСЃРїРµС€РЅРѕ.";
                 }
             }
             catch { return; }
         }
 
-        //загрузить данные пользователя, параметры - данные пользователя
+        //Р·Р°РіСЂСѓР·РёС‚СЊ РґР°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РїР°СЂР°РјРµС‚СЂС‹ - РґР°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
         public bool Upload_ProfileContent(List<List<string>> list, string user_id,string name) 
         {
             bool c = true;
@@ -412,7 +412,7 @@ namespace web_thingy.Pages
 
         }
 
-        //загрузить данные продукта, параметры - данные продукта
+        //Р·Р°РіСЂСѓР·РёС‚СЊ РґР°РЅРЅС‹Рµ РїСЂРѕРґСѓРєС‚Р°, РїР°СЂР°РјРµС‚СЂС‹ - РґР°РЅРЅС‹Рµ РїСЂРѕРґСѓРєС‚Р°
         public bool Upload_ItemContent(List<List<string>> list, string item_id)
         {
             bool c = true;

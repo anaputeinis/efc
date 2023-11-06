@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+п»їusing Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
@@ -15,8 +15,8 @@ namespace web_thingy.Pages
         SqlConnection con;
         
         // Onpost:
-        // получает RequestClass, где type_request - тип операции, которую нужно совершить, content_request - данные, необходимые для совершения указанной операции
-        // возвращает ResponseClass, где type_response - успешность выполнения (0- не успешно, 1- успешно и 2- вариативный случай), content_response- возвращаемые данные или сообщение об ошибке
+        // РїРѕР»СѓС‡Р°РµС‚ RequestClass, РіРґРµ type_request - С‚РёРї РѕРїРµСЂР°С†РёРё, РєРѕС‚РѕСЂСѓСЋ РЅСѓР¶РЅРѕ СЃРѕРІРµСЂС€РёС‚СЊ, content_request - РґР°РЅРЅС‹Рµ, РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ СЃРѕРІРµСЂС€РµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕР№ РѕРїРµСЂР°С†РёРё
+        // РІРѕР·РІСЂР°С‰Р°РµС‚ ResponseClass, РіРґРµ type_response - СѓСЃРїРµС€РЅРѕСЃС‚СЊ РІС‹РїРѕР»РЅРµРЅРёСЏ (0- РЅРµ СѓСЃРїРµС€РЅРѕ, 1- СѓСЃРїРµС€РЅРѕ Рё 2- РІР°СЂРёР°С‚РёРІРЅС‹Р№ СЃР»СѓС‡Р°Р№), content_response- РІРѕР·РІСЂР°С‰Р°РµРјС‹Рµ РґР°РЅРЅС‹Рµ РёР»Рё СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ
         public async Task<IActionResult> OnPost()
         {
             string raw_body = await Helpers.ExtractBodyAsync(Request.Body);
@@ -113,7 +113,7 @@ namespace web_thingy.Pages
             catch
             {
                 type_response = 0;
-                text = "Ошибка работы сервера.";
+                text = "РћС€РёР±РєР° СЂР°Р±РѕС‚С‹ СЃРµСЂРІРµСЂР°.";
             }
             con.Close();
 
@@ -123,7 +123,7 @@ namespace web_thingy.Pages
 
         }
 
-        // получить данные аккаунта по его айди, параметр - айди аккаунта
+        // РїРѕР»СѓС‡РёС‚СЊ РґР°РЅРЅС‹Рµ Р°РєРєР°СѓРЅС‚Р° РїРѕ РµРіРѕ Р°Р№РґРё, РїР°СЂР°РјРµС‚СЂ - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р°
         private void Get_UserId(string user_id) 
         {
             try 
@@ -157,7 +157,7 @@ namespace web_thingy.Pages
             }
         }
 
-        // получить пользователей аккаунта по айди, параметр - айди аккаунта
+        // РїРѕР»СѓС‡РёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р°РєРєР°СѓРЅС‚Р° РїРѕ Р°Р№РґРё, РїР°СЂР°РјРµС‚СЂ - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р°
         private void Get_UserProfiles(string user_id)
         {
             try 
@@ -219,7 +219,7 @@ namespace web_thingy.Pages
             }
         }
 
-        // получить список любимых продуктов/список-историю, параметры - айди аккаунта, название таблицы для считывания данных
+        // РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р»СЋР±РёРјС‹С… РїСЂРѕРґСѓРєС‚РѕРІ/СЃРїРёСЃРѕРє-РёСЃС‚РѕСЂРёСЋ, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р°, РЅР°Р·РІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ РґР»СЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РґР°РЅРЅС‹С…
         private void Get_UserList(string user_id, string table_name)
         {
             try 
@@ -241,7 +241,7 @@ namespace web_thingy.Pages
             catch { return; }
         }
 
-        // получить список товаров, нашедшихся по поисковому запросу, параметры - текст поискового запроса
+        // РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ, РЅР°С€РµРґС€РёС…СЃСЏ РїРѕ РїРѕРёСЃРєРѕРІРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ, РїР°СЂР°РјРµС‚СЂС‹ - С‚РµРєСЃС‚ РїРѕРёСЃРєРѕРІРѕРіРѕ Р·Р°РїСЂРѕСЃР°
         private void Get_Search(string search)
         {
             try
@@ -262,7 +262,7 @@ namespace web_thingy.Pages
             catch { return; }
         }
 
-        // получить список пользователей аккаунта, которым нельзя употреблять продукт с указанным составом, параметры - айди аккаунта, список ингредиентов продукта
+        // РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р°РєРєР°СѓРЅС‚Р°, РєРѕС‚РѕСЂС‹Рј РЅРµР»СЊР·СЏ СѓРїРѕС‚СЂРµР±Р»СЏС‚СЊ РїСЂРѕРґСѓРєС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј СЃРѕСЃС‚Р°РІРѕРј, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р°, СЃРїРёСЃРѕРє РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ РїСЂРѕРґСѓРєС‚Р°
         private void Get_ByIngList(string user_id, List<string> ing_names)
         {
             try 
@@ -285,14 +285,14 @@ namespace web_thingy.Pages
                     dr.Close();
                 }
                 var result = Get_SelectedAllergyProfiles(ing_ids, user_id);
-                if (result.Count() == 0) { result.Add(new AllergyProfile("Этот товар не содержит выбранных аллергенов.", new List<List<string>>(), Int32.Parse(user_id))); }
+                if (result.Count() == 0) { result.Add(new AllergyProfile("Р­С‚РѕС‚ С‚РѕРІР°СЂ РЅРµ СЃРѕРґРµСЂР¶РёС‚ РІС‹Р±СЂР°РЅРЅС‹С… Р°Р»Р»РµСЂРіРµРЅРѕРІ.", new List<List<string>>(), Int32.Parse(user_id))); }
                 text = JsonConvert.SerializeObject(result);
                 type_response = 1;
             }
             catch { return; }
         }
 
-        // получить список пользователей аккаунта, которым нельзя употреблять продукт с указанным штрихкодом, параметры - айди аккаунта, штрихкод продукта
+        // РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р°РєРєР°СѓРЅС‚Р°, РєРѕС‚РѕСЂС‹Рј РЅРµР»СЊР·СЏ СѓРїРѕС‚СЂРµР±Р»СЏС‚СЊ РїСЂРѕРґСѓРєС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С€С‚СЂРёС…РєРѕРґРѕРј, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё Р°РєРєР°СѓРЅС‚Р°, С€С‚СЂРёС…РєРѕРґ РїСЂРѕРґСѓРєС‚Р°
         private void Get_ByBarcode(string user_id, string barcode)
         {
             try 
@@ -314,7 +314,7 @@ namespace web_thingy.Pages
                         adapter.Fill(data);
                         List<string> item_ingredient_ids = data.AsEnumerable().Select(x => x["ingredient_id"].ToString()).ToList().Distinct().ToList();
                         var result = Get_SelectedAllergyProfiles(item_ingredient_ids, user_id);
-                        if (result.Count == 0) { result.Add(new AllergyProfile("Этот товар не содержит выбранных аллергенов.", new List<List<string>>(), Int32.Parse(user_id))); }
+                        if (result.Count == 0) { result.Add(new AllergyProfile("Р­С‚РѕС‚ С‚РѕРІР°СЂ РЅРµ СЃРѕРґРµСЂР¶РёС‚ РІС‹Р±СЂР°РЅРЅС‹С… Р°Р»Р»РµСЂРіРµРЅРѕРІ.", new List<List<string>>(), Int32.Parse(user_id))); }
                         text = JsonConvert.SerializeObject(result);
                         type_response = 1;
                     }
@@ -323,14 +323,14 @@ namespace web_thingy.Pages
                 {
                     dr.Close();
                     type_response = 2;
-                    text = "Товар с таким штрихкодом не зарегистрирован. Попробуйте ввести состав вручную или с помощью камеры.";
+                    text = "РўРѕРІР°СЂ СЃ С‚Р°РєРёРј С€С‚СЂРёС…РєРѕРґРѕРј РЅРµ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РІРІРµСЃС‚Рё СЃРѕСЃС‚Р°РІ РІСЂСѓС‡РЅСѓСЋ РёР»Рё СЃ РїРѕРјРѕС‰СЊСЋ РєР°РјРµСЂС‹.";
                 }
 
             }
             catch { return; }
         }
 
-        // получить продукт по айди, параметры - айди товара
+        // РїРѕР»СѓС‡РёС‚СЊ РїСЂРѕРґСѓРєС‚ РїРѕ Р°Р№РґРё, РїР°СЂР°РјРµС‚СЂС‹ - Р°Р№РґРё С‚РѕРІР°СЂР°
         private void Get_Item(string item_barcode)
         {
             try {  
@@ -355,7 +355,7 @@ namespace web_thingy.Pages
             catch { return; }
         }
 
-        // получить айди некого объекта из таблицы nametable, у которого поле namevariable имеет значение variablevalue
+        // РїРѕР»СѓС‡РёС‚СЊ Р°Р№РґРё РЅРµРєРѕРіРѕ РѕР±СЉРµРєС‚Р° РёР· С‚Р°Р±Р»РёС†С‹ nametable, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РїРѕР»Рµ namevariable РёРјРµРµС‚ Р·РЅР°С‡РµРЅРёРµ variablevalue
         private void Get_IdByName(string nametable,string namevariable,string variablevalue)
         {
             try 
@@ -378,7 +378,7 @@ namespace web_thingy.Pages
 
         }
 
-        // проверить, есть ли у пользователей аккаунта с айди user_id аллергия на ингредиенты с айди из item_ing_ids (возвращает список пользователей)
+        // РїСЂРѕРІРµСЂРёС‚СЊ, РµСЃС‚СЊ Р»Рё Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р°РєРєР°СѓРЅС‚Р° СЃ Р°Р№РґРё user_id Р°Р»Р»РµСЂРіРёСЏ РЅР° РёРЅРіСЂРµРґРёРµРЅС‚С‹ СЃ Р°Р№РґРё РёР· item_ing_ids (РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№)
         private List<AllergyProfile> Get_SelectedAllergyProfiles(List<string> item_ing_ids, string user_id)
         {
             bool G = false;
@@ -437,7 +437,7 @@ namespace web_thingy.Pages
                     {
                         var profile = new AllergyProfile();
                         profile.Name = name;
-                        var g_list = new List<string>() { "глютен", "1", "0" };
+                        var g_list = new List<string>() { "РіР»СЋС‚РµРЅ", "1", "0" };
                         if (!profile.AllergyList.Contains(g_list))
                         {
                             profile.AllergyList.Add(g_list);
@@ -460,7 +460,7 @@ namespace web_thingy.Pages
                     {
                         var profile = new AllergyProfile();
                         profile.Name = name;
-                        var l_list = new List<string>() { "лактоза", "0", "1" };
+                        var l_list = new List<string>() { "Р»Р°РєС‚РѕР·Р°", "0", "1" };
                         if (!profile.AllergyList.Contains(l_list))
                         {
                             profile.AllergyList.Add(l_list);
@@ -474,7 +474,7 @@ namespace web_thingy.Pages
             return selected_allergy_profiles;
         }
 
-        // проверить, есть ли в списке list пользователь с именем как у пользователя profile
+        // РїСЂРѕРІРµСЂРёС‚СЊ, РµСЃС‚СЊ Р»Рё РІ СЃРїРёСЃРєРµ list РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃ РёРјРµРЅРµРј РєР°Рє Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ profile
         public void Check_ProfileList(List<AllergyProfile> list, AllergyProfile profile)
         {
             bool c = true;
