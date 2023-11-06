@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F0F0F0">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="300dp"
+    android:minWidth="300dp"
+    android:background="#F0F0F0"
+    android:padding="10dp">
+    <TextView
+        android:text="@string/str_enter_with_comma"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/usual_text"
+        android:id="@+id/see_detected_text_warning" />
+    <EditText
+        android:text="@string/str_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:background="@drawable/edit_text"
+        style="@style/usual_text"
+        android:minHeight="25px"
+        android:hint="@string/str_please_wait"
+        android:id="@+id/see_detected_text" />
+    <Button
+        android:text="@string/str_continue"
+        android:background="@drawable/new_button"
+        style="@style/button_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/see_detected_text_button" />
+    <Button
+        android:text="@string/str_exit"
+        android:background="@drawable/new_button_bland"
+        style="@style/button_text_bland"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/see_detected_text_exit_button" />
+
+
+
+</LinearLayout>
+    </ScrollView>

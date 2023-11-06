@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:padding="16dp"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">  
+    <TextView
+            android:text="@string/str_welcome"
+            style="@style/big_text"
+            android:background="@drawable/edit_text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="92.5dp"
+            android:id="@+id/sign_view_1" />
+        <EditText 
+           android:layout_below="@id/sign_view_1"
+            android:hint="@string/str_enter_your_email"  
+            android:id="@+id/signup_email"  
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:inputType="textCapWords"  
+            android:maxLines="1"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content" />  
+        <EditText  
+            android:hint="@string/str_enter_your_password"  
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:id="@+id/signup_password"  
+            android:inputType="textPassword"  
+            android:maxLines="1"  
+            android:layout_below="@id/signup_email"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content" />  
+    <Button  
+        android:layout_below="@+id/signup_password"  
+        android:id="@+id/signup_btn_register"  
+        android:text="@string/str_register"   
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:background="@drawable/new_button"
+        style="@style/button_text" />  
+    <TextView  
+        android:layout_below="@+id/signup_btn_register"  
+        android:id="@+id/signup_btn_forget_password"  
+        android:text="@string/str_forget_password"   
+        android:clickable="true"  
+        android:layout_centerHorizontal="true"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:background="@drawable/new_button_bland"
+        style="@style/button_text_bland"
+         />  
+    <LinearLayout
+            android:layout_below="@+id/signup_btn_forget_password"
+            android:id="@+id/sign_up_layout_or"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:background="#C4C8C9"
+                android:layout_margin="5dp" />
+            <TextView
+                android:padding="5dp"
+                android:text="@string/str_or"
+                style="@style/usual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:background="#C4C8C9"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    <TextView  
+        android:layout_below="@+id/sign_up_layout_or"  
+        android:id="@+id/signup_btn_login"  
+        android:text="@string/str_already_account"   
+        android:clickable="true"  
+        android:layout_centerHorizontal="true"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:background="@drawable/new_button_bland"
+        style="@style/button_text_bland" />  
+    <TextView
+        android:text="@string/str_blank"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/signup_btn_login"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_up_warning"
+        android:background="@drawable/warning_text"
+        style="@style/small_text_bold"/>  
+</RelativeLayout>  

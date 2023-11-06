@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+    <ImageButton
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageButton1" />
+    <View  
+            android:layout_width="match_parent"
+            android:layout_below="@id/imageButton1"
+            android:layout_height="6dp"  
+            android:background="#B1B1B1"  
+            android:layout_margin="5dp"
+            android:id="@+id/image"/> 
+    <EditText
+        android:text="Привет красавица одну тут отдыхаеш"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        style="@style/big_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/image"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edit_text_thing"
+        android:id="@+id/greeting_pt1" />
+    <TextView
+        android:text="@string/str_greeting_pt2"
+        android:background="@drawable/edit_text_thing"
+        style="@style/usual_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/greeting_pt1"
+        android:id="@+id/greeting_pt2" />
+    <TextView
+        android:text="@string/str_greeting_pt2"
+        android:background="@drawable/edit_text_thing"
+        style="@style/small_text_bland"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/greeting_pt2"
+        android:id="@+id/greeting_pt3" />
+    <TextView
+        android:text="@string/str_greeting_pt2"
+        android:background="@drawable/warning_text_thing"
+        style="@style/small_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/greeting_pt3"
+        android:id="@+id/greeting_pt4" />
+    <Button
+        android:background="@drawable/new_button_bland"
+        style="@style/button_text_bland"
+        android:text="@string/str_add_words"
+        android:layout_below="@id/greeting_pt4"
+        android:layout_toRightOf="@id/main_blank_space"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_words_button"/>
+    <TextView
+        android:text="@string/str_blank_space"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/greeting_pt2"
+        android:id="@+id/main_blank_space" />
+    <Button
+        android:background="@drawable/new_button"
+        android:text="@string/str_practice"
+        android:layout_below="@id/greeting_pt4"
+        android:layout_toLeftOf="@id/main_blank_space"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/practice_button"
+        style="@style/button_text"
+        android:layout_marginRight="0.0dp" />
+    <TextView
+        android:text="@string/str_is_internet"
+        android:layout_below="@id/main_blank_space"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="39.0dp"
+        android:id="@+id/is_internet"
+        android:visibility="gone"
+        android:layout_marginBottom="5.0dp"
+        android:layout_marginTop="37.5dp" />
+    <TextView
+        android:text="@string/str_blank_space"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/is_internet"
+        android:id="@+id/main_blank_space_duo" />
+    <Button
+        android:text="@string/str_online"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/main_blank_space_duo"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/is_internet"
+        android:id="@+id/online_button" />
+    <Button
+        android:text="@string/str_offline"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/is_internet"
+        android:layout_toRightOf="@id/main_blank_space_duo"
+        android:layout_height="wrap_content"
+        android:id="@+id/offline_button" />
+
+</RelativeLayout>

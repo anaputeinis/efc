@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F0F0F0">>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0"
+        android:padding="10dp">>
+        <View  
+            android:layout_width="match_parent"
+            android:layout_height="6dp"  
+            android:background="#D2D2D2"  
+            android:layout_margin="5dp"
+            android:id="@+id/camera_view"/> 
+        <Button
+            android:text="@string/str_open_camera"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_below="@id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginTop="20dp"
+            android:id="@+id/open_camera_button" />
+        <Button
+            android:text="@string/str_open_galery"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/open_camera_button"
+            android:id="@+id/choose_from_gallery_button" />
+        <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_below="@id/choose_from_gallery_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/abc_action_bar_stacked_tab_max_width"/>
+        <TextView
+            android:text="@string/str_yes"
+            style="@style/usual_text"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@id/cropImageView"
+            android:id="@+id/between_buttons" />
+        <Button
+            android:text="@string/str_crop"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_width="130.5dp"
+            android:layout_below="@id/cropImageView"
+            android:layout_height="60.0dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/between_buttons"
+            android:id="@+id/crop_button" />
+        <Button
+            android:text="@string/str_rotate"
+            android:layout_width="130.5dp"
+            android:layout_height="60.0dp"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_toRightOf="@id/between_buttons"
+            android:layout_below="@id/cropImageView"
+            android:id="@+id/camera_page_rotate_button" />
+        <TextView
+            android:text="@string/str_blank"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="28.5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/crop_button"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/camera_blank_space" />
+        <Button
+            android:text="@string/str_scan_barcode"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/camera_blank_space"
+            android:id="@+id/camera_scan_barcode_button" />
+        <Button
+            android:text="@string/str_read_text"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/camera_scan_barcode_button"
+            android:id="@+id/camera_read_text_button" />
+         <LinearLayout  
+        android:layout_below="@+id/camera_read_text_button"  
+        android:id="@+id/camera_layout_or"  
+        android:gravity="center"  
+        android:orientation="horizontal"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content">  
+        <View  
+            android:layout_width="200dp"  
+            android:layout_height="1dp"  
+            android:background="#D2D2D2" 
+            android:layout_margin="5dp" />  
+        <TextView  
+            android:padding="5dp"  
+            android:text="@string/str_or"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content" />  
+        <View  
+            android:layout_width="200dp"  
+            android:layout_height="1dp"  
+            android:background="#D2D2D2"  
+            android:layout_margin="5dp" />  
+    </LinearLayout>  
+        <Button
+            android:text="@string/str_input_by_hand"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/camera_layout_or"
+            android:id="@+id/camera_input_by_hand_button" />
+
+
+    </RelativeLayout>
+</ScrollView>

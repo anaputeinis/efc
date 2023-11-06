@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:background="#F0F0F0">
+    <RelativeLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+    <View  
+            android:layout_width="match_parent"
+            android:layout_height="6dp"  
+            android:background="#B1B1B1"  
+            android:layout_margin="5dp"
+            android:id="@+id/profile_view_1"/> 
+    <TextView
+        android:layout_below="@id/profile_view_1"
+        android:text="@string/str_here_are_your_allergy_profiles"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:background="@drawable/edit_text"
+        android:breakStrategy="simple"
+        android:textColor="#212121"
+		android:gravity="left"
+        android:layout_margin="3dp"
+		android:textSize="20dp"
+		android:fontFamily="monospace"
+		android:textStyle="bold" 
+        android:id="@+id/profile_textview"
+        android:layout_marginRight="38.0dp" />
+        <ImageButton
+            android:layout_below="@id/profile_view_1"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@id/profile_textview"
+            android:layout_marginRight="10dp"
+            android:id="@+id/imageButton_fav" />
+        <ImageButton
+            android:layout_below="@id/profile_view_1"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@id/imageButton_fav"
+            android:id="@+id/imageButton_his" />
+       <View  
+            android:layout_width="match_parent"
+            android:layout_below="@id/imageButton_his"
+            android:layout_height="6dp"  
+            android:background="#B1B1B1"  
+            android:layout_margin="5dp"
+            android:id="@+id/profile_view_2"/> 
+      <TextView
+        android:text="@string/str_press_to_edit"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:breakStrategy="simple"
+        android:layout_below="@id/profile_view_2"
+        android:layout_height="wrap_content"
+        style="@style/small_text_bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/profile_instruction" />
+    <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="360.0dp"
+        android:layout_below="@id/profile_instruction"
+        android:background="@drawable/list"
+        android:nestedScrollingEnabled="true"
+        android:id="@+id/profile_listview"/>
+        <Button
+            android:text="@string/str_add_allergy_profile"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_listview"
+            android:id="@+id/add_allergy_profile_button" />
+        <Button
+            android:text="@string/str_logout"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_allergy_profile_button"
+            android:id="@+id/profile_logout_button" />
+        <Button
+            android:text="@string/str_change_password"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_logout_button"
+            android:id="@+id/profile_change_password_button" />
+        <EditText
+            android:text="@string/str_blank"
+            android:visibility="gone"
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:hint="@string/str_enter_new_password"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_change_password_button"
+            android:id="@+id/profile_first_password" />
+        <EditText
+            android:text="@string/str_blank"
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:visibility="gone"
+            android:hint="@string/str_repeat_new_password"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_first_password"
+            android:id="@+id/profile_second_password" />
+        <Button
+            android:text="@string/str_save"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_second_password"
+            android:id="@+id/profile_save_button" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

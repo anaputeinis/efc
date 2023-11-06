@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:padding="20dp">
+    <TextView
+        android:text="@string/str_do_you_want_to_remove"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remove_textview"
+        style="@style/usual_text"
+        />
+    <Button
+        android:text="@string/str_yes"
+        android:layout_width="match_parent"
+        android:layout_height="62.5dp"
+        android:layout_below="@id/remove_textview"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="@drawable/new_button"
+        style="@style/button_text"
+        android:id="@+id/remove_yes_button" />
+    <Button
+        android:text="@string/str_no"
+        android:layout_width="match_parent"
+        android:layout_height="62.5dp"
+        android:background="@drawable/new_button"
+        style="@style/button_text"
+        android:layout_below="@id/remove_textview"
+        android:id="@+id/remove_no_button" />
+
+</LinearLayout>

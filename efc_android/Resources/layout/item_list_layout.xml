@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:padding="10dp">
+    <TextView
+        android:text="@string/str_blank"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/big_text"
+        android:id="@+id/item_list_greeting" />
+    <TextView
+        android:text="@string/str_hold_to_delete"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_text_bold"
+        android:visibility="gone"
+        android:id="@+id/item_instruction_hold" />
+    <TextView
+        android:text="@string/str_blank"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/warning_text"
+        style="@style/small_text_bold"
+        android:visibility="gone"
+        android:id="@+id/item_list_warning" />
+    <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/list"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/item_list" />
+</LinearLayout>

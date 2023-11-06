@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/exct_rpt_show_word"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+        />
+    <TextView
+        android:text="@string/str_practice_5_blank_space"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="43.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/exct_rpt_show_word"
+        android:id="@+id/exct_rpt_check_message" />
+    <TextView
+        android:text="@string/str_practice_5_blank_space"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="43.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/exct_rpt_check_message"
+        android:id="@+id/exct_rpt_correct_word" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="43.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/exct_rpt_correct_word"
+        android:hint="@string/hint_translate_to_latvian"
+        android:id="@+id/exct_rpt_write_translation" />
+    
+    <Button
+        android:text="@string/str_check_button"
+        android:layout_below="@id/exct_rpt_write_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exct_rpt_check_button" />
+    <Button
+        android:text="@string/str_i_dont_know"
+        android:layout_below="@id/exct_rpt_check_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exct_rpt_dont_know_button" />
+    <Button
+        android:text="@string/str_skip"
+        android:layout_below="@id/exct_rpt_dont_know_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exct_rpt_skip_button" />
+    <Button
+        android:text="@string/str_see_word_list"
+        android:layout_below="@id/exct_rpt_skip_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exct_rpt_see_set_button" />
+    <Button
+        android:text="@string/str_remove"
+        android:layout_below="@id/exct_rpt_see_set_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exct_rpt_remove_button" />
+
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/exct_rpt_remove_button"
+        android:layout_width="match_parent"
+        android:layout_height="453.5dp"
+        android:id="@+id/exct_rpt_practice_listview" />
+
+        
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:background="#F0F0F0">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="200dp"
+        android:minWidth="200dp"
+        android:background="#F0F0F0"
+        android:padding="10dp">
+        <EditText
+            android:text="@string/str_blank"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/str_input_name"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:visibility="gone"
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:id="@+id/profile_popup_name_text_edit" />
+        <TextView
+            android:text="@string/str_blank"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:background="@drawable/edit_text"
+            style="@style/usual_text"
+            android:layout_below="@id/profile_popup_name_text_edit"
+            android:minHeight="25px"
+            android:id="@+id/profile_popup_name_text" />
+        <TextView
+            android:text="@string/str_check_if_allergy"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_below="@id/profile_popup_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_text_bold"
+            android:id="@+id/profile_checkbox_instruction_name" />
+        <CheckBox
+            android:text="@string/str_gluten"
+            android:layout_below="@id/profile_checkbox_instruction_name"
+            android:layout_marginRight="@dimen/abc_action_bar_content_inset_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:buttonTint="#212121"
+            android:id="@+id/profile_checkBox_gluten_name" />
+        <CheckBox
+            android:text="@string/str_lactose"
+            android:layout_below="@id/profile_checkbox_instruction_name"
+            android:layout_toRightOf="@id/profile_checkBox_gluten_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:buttonTint="#212121"
+            android:id="@+id/profile_checkBox_lactose_name" />
+        
+        <Button
+            android:text="@string/str_create_new_allergy_profile"
+            android:layout_below="@id/profile_checkBox_lactose_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:id="@+id/profile_popup_new_allergy_profile_button" />
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="259.5dp"
+            android:background="@drawable/list"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@id/profile_popup_new_allergy_profile_button"
+            android:id="@+id/profile_popup_listview" />
+        <EditText
+            android:text="@string/str_blank"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/profile_popup_listview"
+            android:hint="@string/str_input_new_allergy"
+            android:id="@+id/profile_popup_add_text" />
+        <TextView
+            android:text="@string/str_check_if_contains"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_below="@id/profile_popup_add_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_checkbox_instruction" />
+
+        <CheckBox
+            android:text="@string/str_gluten"
+            android:layout_below="@id/profile_checkbox_instruction"
+            android:layout_marginRight="@dimen/abc_action_bar_content_inset_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#212121"
+            android:id="@+id/profile_checkBox_gluten" />
+
+        <CheckBox
+            android:text="@string/str_lactose"
+            android:layout_below="@id/profile_checkbox_instruction"
+            android:layout_toRightOf="@id/profile_checkBox_gluten"
+            android:layout_width="wrap_content"
+            android:buttonTint="#212121"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_checkBox_lactose" />
+        <Button
+            android:text="@string/str_add"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_below="@id/profile_checkBox_lactose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_popup_add_allergy_button" />
+
+        <TextView
+            android:text="@string/str_blank"
+            android:background="@drawable/warning_text"
+            style="@style/small_text_bold"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_popup_add_allergy_button"
+            android:id="@+id/profile_popup_warning" />
+        <Button
+            android:text="@string/str_yes"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_below="@id/profile_popup_warning"
+            android:layout_marginLeft="@dimen/abc_action_bar_content_inset_material"
+            android:layout_marginRight="@dimen/abc_action_bar_content_inset_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/profile_popup_yes_button" />
+        <Button
+            android:text="@string/str_no"
+            android:background="@drawable/new_button_bland"
+            style="@style/button_text_bland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_popup_warning"
+            android:layout_toRightOf="@id/profile_popup_yes_button"
+            android:visibility="gone"
+            android:id="@+id/profile_popup_no_button" />
+        <Button
+            android:text="@string/str_save"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_popup_no_button"
+            android:id="@+id/profile_popup_save_button" />
+        <Button
+            android:text="@string/str_delete"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_popup_save_button"
+            android:id="@+id/profile_popup_delete_button" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

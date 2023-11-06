@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:hint="@string/hint_enter_word"
+        android:id="@+id/edit_word_field" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/edit_word_field"
+        android:hint="@string/hint_enter_translation"
+        android:id="@+id/edit_translation_field" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/edit_translation_field"
+        android:hint="@string/hint_enter_category"
+        android:id="@+id/edit_category_field" />
+    <TextView
+        android:text="@string/str_error_field"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/edit_category_field"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edit_error_field" />
+    <Button
+        android:text="@string/str_edit"
+        android:layout_below="@id/edit_error_field"
+        android:layout_width="match_parent"
+        android:layout_height="37.5dp"
+        android:id="@+id/edit_edit_button" />
+    <Button
+        android:text="@string/str_delete"
+        android:layout_below="@id/edit_edit_button"
+        android:layout_width="match_parent"
+        android:layout_height="37.5dp"
+        android:id="@+id/edit_delete_button" />
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="176.5dp"
+        android:layout_height="29.5dp"
+        android:layout_toLeftOf="@id/adapter_blank_space"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="@string/str_adapter_blank_space"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="28.5dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/adapter_blank_space" />
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="180.5dp"
+        android:layout_toRightOf="@id/adapter_blank_space"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <TextView
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@id/adapter_blank_space"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:id="@+id/textView3" />
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/str_enter_word"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/enter_word" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/enter_word"
+        android:hint="@string/hint_enter_word"
+        android:id="@+id/word_field" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/word_field"
+        android:hint="@string/hint_enter_translation"
+        android:id="@+id/translation_field" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/translation_field"
+        android:hint="@string/hint_enter_category"
+        android:id="@+id/category_field" />
+    <Button
+        android:text="@string/str_add_word"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_field"
+        android:id="@+id/add_word_button"
+        android:layout_marginRight="0.0dp" />
+    <TextView
+        android:text="@string/str_error_field"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@id/add_word_button"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/error_field" />
+    <Button
+        android:text="@string/str_see_word_list"
+        android:layout_below="@id/error_field"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/see_word_list_button" />
+    <Button
+        android:text="@string/str_clear_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/see_word_list_button"
+        android:id="@+id/clear_category_button" />
+
+
+
+</RelativeLayout>
+
+

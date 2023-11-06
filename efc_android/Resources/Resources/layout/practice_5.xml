@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/practice_5_blank_space_first"
+            android:id="@+id/show_word_first" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/practice_5_blank_space_first" />
+        <EditText
+            android:layout_width="163.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@id/practice_5_blank_space_first"
+            android:hint="@string/hint_translate_to_latvian"
+            android:id="@+id/write_translation_first" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/show_word_first"
+            android:id="@+id/check_first" />
+
+
+
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_first"
+            android:id="@+id/show_word_second" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/check_first"
+            android:id="@+id/practice_5_blank_space_second" />
+        <EditText
+            android:layout_width="163.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_first"
+            android:hint="@string/hint_translate_to_latvian"
+            android:id="@+id/write_translation_second" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/show_word_second"
+            android:id="@+id/check_second"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+
+
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/practice_5_blank_space_third"
+            android:layout_below="@id/check_second"
+            android:id="@+id/show_word_third" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/practice_5_blank_space_second"
+            android:id="@+id/practice_5_blank_space_third" />
+        <EditText
+            android:layout_width="163.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_second"
+            android:hint="@string/hint_translate_to_latvian"
+            android:id="@+id/write_translation_third" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/show_word_third"
+            android:id="@+id/check_third"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+
+
+
+
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_third"
+            android:id="@+id/show_word_fourth" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/practice_5_blank_space_third"
+            android:id="@+id/practice_5_blank_space_fourth" />
+        <EditText
+            android:layout_width="163.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_third"
+            android:hint="@string/hint_translate_to_latvian"
+            android:id="@+id/write_translation_fourth" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/show_word_fourth"
+            android:id="@+id/check_fourth"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+
+
+
+
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toLeftOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_fourth"
+            android:id="@+id/show_word_fifth" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/practice_5_blank_space_fourth"
+            android:id="@+id/practice_5_blank_space_fifth" />
+        <EditText
+            android:layout_width="163.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_toRightOf="@id/practice_5_blank_space_second"
+            android:layout_below="@id/check_fourth"
+            android:hint="@string/hint_translate_to_latvian"
+            android:id="@+id/write_translation_fifth" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="179.0dp"
+            android:layout_height="43.5dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/show_word_fifth"
+            android:id="@+id/check_fifth"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginBottom="0.0dp"
+            android:layout_marginLeft="0.0dp" />
+
+
+        <Button
+            android:text="@string/str_check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/check_fifth"
+            android:layout_toRightOf="@id/practice_5_blank_space_button"
+            android:id="@+id/practice_5_check_button" />
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="20.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/check_fifth"
+            android:id="@+id/practice_5_blank_space_button" />
+         <Button
+            android:text="@string/str_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/check_fifth"
+            android:layout_toLeftOf="@id/practice_5_blank_space_button"
+            android:id="@+id/practice_5_exit_button" />
+
+
+        <TextView
+            android:text="@string/str_practice_5_blank_space"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="20.0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/practice_5_blank_space_button"
+            android:id="@+id/practice_5_blank_space_more_button" />
+        <Button
+            android:text="@string/str_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/practice_5_blank_space_more_button"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/practice_5_more_button" />
+
+
+
+    </RelativeLayout>
+</LinearLayout>
+

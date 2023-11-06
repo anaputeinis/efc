@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F0F0F0">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0">
+        <View  
+            android:layout_width="match_parent"
+            android:layout_height="6dp"  
+            android:background="#D2D2D2"  
+            android:layout_margin="5dp"
+            android:id="@+id/dashboard_view_1"/>
+        <TextView
+            android:id="@+id/dashboard_welcome"
+            android:text="@string/str_welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dashboard_view_1"
+            android:layout_width="413.0dp"
+            android:layout_height="235.0dp"
+            style="@style/big_text"
+            android:background="@drawable/edit_text"
+            android:textColor="@color/colorPrimaryDark" />
+        <View  
+            android:layout_width="match_parent"
+            android:layout_below="@id/dashboard_welcome"
+            android:layout_height="6dp"  
+            android:background="#D2D2D2"  
+            android:layout_margin="5dp"
+            android:id="@+id/dashboard_view_2"/> 
+        <Button
+            android:text="@string/str_see_profile"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dashboard_view_2"
+            android:id="@+id/see_profile_button" />
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:text="@string/str_scan"
+            android:layout_below="@id/see_profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dashboard_scan_button" />
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:text="@string/str_add_product"
+            android:layout_below="@id/dashboard_scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dashboard_add_product_button" />
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_button"
+            style="@style/button_text"
+            android:text="@string/str_find"
+            android:layout_below="@id/dashboard_add_product_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dashboard_find_product_button" />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
